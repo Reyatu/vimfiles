@@ -363,8 +363,7 @@ syn keyword fasmType dqword fword pword qqword tbyte tword xword yword
 " Jump and call types
 syn keyword fasmType far near short
 
-syn match fasmLabel '[^ ;\t]\+\s*:' contained contains=fasmSpecial display
-syn match fasmDummy '^\s*[^ ;\t]\+\s*:' contains=fasmLabel display
+syn match fasmLabel '^\s*\zs[^ ;\t]\+\s*:' contains=fasmSpecial display
 
 " Decimal or floating point
 syn match fasmNumber '\<\d\+\(\.\d\+\)\?\(e[+\-]*\d\+\)\?f\?\>' display
@@ -386,7 +385,8 @@ syn match fasmOperator '[#&*+,/<=>\-`|~]' display
 syn match fasmSpecial '@@' contained display
 
 " References to anonymous label
-syn match fasmSpecial '@\(b\|f\|r\)' display
+" FIXME: Does not highlight after fasmOperator without spaces
+syn match fasmSpecial '\(^\|\W\)\zs@\(b\|f\|r\)\>' display
 
 syn match fasmSpecial '%t\?' display
 syn match fasmSpecial '?' display
