@@ -1,6 +1,6 @@
 " Nothing To Say Here
 
-" Last Change: 2015 January 18
+" Last Change: 2015 February 03
 
 hi clear
 
@@ -12,6 +12,21 @@ endif
 
 let g:colors_name = "ntsh"
 
+" Terminal
+hi Directory	term=NONE	cterm=NONE	ctermfg=6
+hi Folded	term=NONE			ctermfg=1
+hi Identifier	term=NONE	cterm=NONE
+hi MatchParen	term=NONE					ctermbg=4
+hi NonText	term=NONE	cterm=NONE	ctermfg=1
+hi Question	term=NONE
+hi Search	term=bold	cterm=bold			ctermbg=1
+hi SpecialKey					ctermfg=1
+hi Statement	term=NONE	cterm=NONE
+hi StatusLine	term=NONE	cterm=NONE	ctermfg=7	ctermbg=4
+hi Todo		term=bold	cterm=bold	ctermfg=3	ctermbg=4
+hi Type		term=NONE	cterm=NONE
+
+" GUI
 hi Cursor			guifg=Black	guibg=Green
 hi Directory			guifg=Orange
 hi Folded			guifg=Red	guibg=Black
