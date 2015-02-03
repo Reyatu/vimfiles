@@ -16,8 +16,9 @@ syn keyword fasmMacro
 syn keyword fasmMacro double elseif endif endw signed until
 
 " Symbolic variables for customizing procedures
-syn match fasmSpecial '\<\(close\|epilogue\|localbase\|parmbase\|prologue\)
-		      \@proc\>' display
+syn match fasmSpecial
+	\ '\<\(close\|epilogue\|localbase\|parmbase\|prologue\)@proc\>'
+	\ display
 
 " Conditional flags for extended Windows headers
 syn match fasmSpecial '\<\(CARRY\|OVERFLOW\|PARITY\|SIGN\|ZERO\)?' display
