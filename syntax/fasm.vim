@@ -1,6 +1,6 @@
 " Mostly copied from FASM.PDF and TABLES.INC
 
-" Last Change: 2015 February 03
+" Last Change: 2015 February 07
 
 syn keyword fasmTodo FIXME NOTE TODO XXX contained
 
@@ -315,16 +315,15 @@ syn match fasmNumber '\<\o\+o\>' display
 " Hexadecimal
 syn match fasmNumber '\<\d\x*h\>' display
 syn match fasmNumber '\<0x\x\+\>' display
-syn match fasmNumber '\$\x\+\>' display
+syn match fasmNumber '\>\@!\$\x\+\>' display
 
 syn match fasmOperator '[#&*+,/<=>\-`|~]' display
 
 " Anonymous label
 syn match fasmSpecial '@@' contained display
 
-" References to anonymous label
-" FIXME: Does not highlight after fasmOperator without spaces
-syn match fasmSpecial '\(^\|\W\)\zs@\(b\|f\|r\)\>' display
+" Reference to anonymous label
+syn match fasmSpecial '\>\@!@[bfr]\>' display
 
 syn match fasmSpecial '%t\?' display
 syn match fasmSpecial '?' display
