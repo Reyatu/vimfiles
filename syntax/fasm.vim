@@ -315,7 +315,7 @@ syn match fasmNumber '\<\o\+o\>' display
 " Hexadecimal
 syn match fasmNumber '\<\d\x*h\>' display
 syn match fasmNumber '\<0x\x\+\>' display
-syn match fasmNumber '\>\@!\$\x\+\>' display
+syn match fasmNumber '\$\x\+\>' display
 
 syn match fasmOperator '[#&*+,/<=>\-`|~]' display
 
