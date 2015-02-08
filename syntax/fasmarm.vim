@@ -1,6 +1,6 @@
 " Mostly copied from ARMTABLE.INC
 
-" Last Change: 2015 February 03
+" Last Change: 2015 February 07
 
 syn keyword fasmarmTodo FIXME NOTE TODO XXX contained
 
@@ -326,8 +326,8 @@ syn match fasmarmRegister
 " Anonymous label
 syn match fasmarmSpecial '@@' contained display
 
-" References to anonymous label
-syn match fasmarmSpecial '@\(b\|f\|r\)' display
+" Reference to anonymous label
+syn match fasmSpecial '\>\@!@[bfr]\>' display
 
 syn match fasmarmSpecial '%t\?' display
 syn match fasmarmSpecial '?' display
@@ -357,4 +357,4 @@ hi def link fasmarmType		Type
 
 let b:current_syntax = "fasmarm"
 
-" vim: fdm=marker:tw=78
+" vim:fdm=marker:tw=78:
