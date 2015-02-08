@@ -354,4 +354,4 @@ hi def link fasmType		Type
 
 let b:current_syntax = 'fasm'
 
-" vim:fdm=marker:tw=78
+" vim:fdm=marker:tw=78:
