@@ -1,6 +1,6 @@
 " Mostly copied from FASM.PDF and TABLES.INC
 
-" Last Change: 2015 February 07
+" Last Change: 2015 March 06
 
 syn keyword fasmTodo FIXME NOTE TODO XXX contained
 
@@ -13,7 +13,11 @@ syn keyword fasmMacro
 	\ versioninfo
 
 " Macros for extended Windows headers
-syn keyword fasmMacro double elseif endif endw signed until
+syn keyword fasmMacro double signed
+
+syn match fasmMacro
+	\ '\.\(code\|data\|else\(if\)\?\|end\(if\|w\)\?
+	  \\|if\|repeat\|until\|while\)\>' display
 
 " Symbolic variables for customizing procedures
 syn match fasmSpecial
