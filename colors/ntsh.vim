@@ -1,6 +1,6 @@
 " Nothing To Say Here
 
-" Last Change: 2015 February 03
+" Last Change: 2015 March 14
 
 hi clear
 
@@ -13,21 +13,22 @@ endif
 let g:colors_name = "ntsh"
 
 " Terminal
-hi Directory	term=NONE	cterm=NONE	ctermfg=6
+hi Directory	term=NONE			ctermfg=6
 hi Folded	term=NONE			ctermfg=1
 hi Identifier	term=NONE	cterm=NONE
 hi MatchParen	term=NONE					ctermbg=4
-hi NonText	term=NONE	cterm=NONE	ctermfg=1
+hi NonText	term=NONE			ctermfg=1
 hi Question	term=NONE
 hi Search	term=bold	cterm=bold			ctermbg=1
 hi SpecialKey					ctermfg=1
-hi Statement	term=NONE	cterm=NONE
+hi Statement	term=NONE
 hi StatusLine	term=NONE	cterm=NONE	ctermfg=7	ctermbg=4
 hi Todo		term=bold	cterm=bold	ctermfg=3	ctermbg=4
-hi Type		term=NONE	cterm=NONE
+hi Type		term=NONE
 
 " GUI
 hi Cursor			guifg=Black	guibg=Green
+hi CursorLine	gui=underline			guibg=NONE
 hi Directory			guifg=Orange
 hi Folded			guifg=Red	guibg=Black
 hi MatchParen					guibg=Blue
@@ -35,7 +36,7 @@ hi ModeMsg			guifg=#f0f0f0
 hi NonText	gui=NONE	guifg=DarkRed
 hi Normal			guifg=#f0f0f0	guibg=Black
 hi Question	gui=NONE
-hi Search	gui=bold	guifg=Black	guibg=Red
+hi Search	gui=bold			guibg=Red
 hi SpecialKey			guifg=DarkRed
 hi Statement	gui=NONE	guifg=Yellow
 hi StatusLine	gui=NONE	guifg=#f0f0f0	guibg=Blue
