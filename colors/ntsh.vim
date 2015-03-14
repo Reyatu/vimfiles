@@ -28,7 +28,7 @@ hi Type		term=NONE
 
 " GUI
 hi Cursor			guifg=Black	guibg=Green
-hi CursorLine	gui=underline			guibg=NONE
+hi CursorLine					guibg=#202020
 hi Directory			guifg=Orange
 hi Folded			guifg=Red	guibg=Black
 hi MatchParen					guibg=Blue
