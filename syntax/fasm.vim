@@ -308,21 +308,19 @@ syn keyword fasmType far near short
 syn match fasmLabel '^\s*\zs[^ ;\t]\+\s*:' contains=fasmSpecial display
 
 " Decimal or floating point
-syn match fasmNumber '\<\d\+\(\.\d\+\)\?\(e[+\-]*\d\+\)\?f\?\>' display
+syn match fasmNumber
+	\ "\<\d\('\|\d\)*\(\.\d\+\)\?\(e[+\-]*\d\+\)\?f\?\>" display
 
 " Binary
-syn match fasmNumber '\<[01]\+b\>' display
+syn match fasmNumber "\<['01]\+b\>" display
 
 " Octal
-syn match fasmNumber '\<\o\+o\>' display
+syn match fasmNumber "\<\('\|\o\)\+o\>" display
 
 " Hexadecimal
-syn match fasmNumber '\<\d\x*h\>' display
-syn match fasmNumber '\<0x\x\+\>' display
-syn match fasmNumber '\$\x\+\>' display
-
-" Apostrophes are allowed in numbers except for floating point
-syn match fasmNumber "'" display
+syn match fasmNumber "\<\d\('\|\x\)*h\>" display
+syn match fasmNumber "\<0x\('\|\x\)\+\>" display
+syn match fasmNumber "\$\('\|\x\)\+\>" display
 
 syn match fasmOperator '[#&*+,/<=>\-`|~]' display
 
