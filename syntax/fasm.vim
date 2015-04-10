@@ -1,6 +1,6 @@
 " Mostly copied from FASM.PDF and TABLES.INC
 
-" Last Change: 2015 March 06
+" Last Change: 2015 April 10
 
 syn keyword fasmTodo FIXME NOTE TODO XXX contained
 
@@ -320,6 +320,9 @@ syn match fasmNumber '\<\o\+o\>' display
 syn match fasmNumber '\<\d\x*h\>' display
 syn match fasmNumber '\<0x\x\+\>' display
 syn match fasmNumber '\$\x\+\>' display
+
+" Apostrophes are allowed in numbers except for floating point
+syn match fasmNumber "'" display
 
 syn match fasmOperator '[#&*+,/<=>\-`|~]' display
 
